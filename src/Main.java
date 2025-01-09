@@ -10,8 +10,17 @@ public class Main {
         m10101515.addChild(new SingleFile("Certidao_de_Nascimento.jpg"));
         m10101515.addChild(new SingleFile("Historico.pdf"));
         Directory ano2015 = new Directory("2015");
+        Directory ano2016 = new Directory("2016");
+        Directory ano2017 = new Directory("2017");
+        Directory ano2018 = new Directory("2018");
         m10101515.addChild(ano2015);
+        m10101515.addChild(ano2016);
+        m10101515.addChild(ano2017);
+        m10101515.addChild(ano2018);
         ano2015.addChild(new SingleFile("Mapa_de_Notas.pdf"));
+        ano2016.addChild(new SingleFile("Mapa_de_Notas.pdf"));
+        ano2017.addChild(new SingleFile("Mapa_de_Notas.pdf"));
+        ano2018.addChild(new SingleFile("Mapa_de_Notas.pdf"));
 
         boolean loop = true;
 
@@ -36,6 +45,8 @@ public class Main {
                 String novaMatricula = scanner.nextLine();
                 Directory novoAluno = new Directory(novaMatricula);
                 matriculas.addChild(novoAluno);
+                novoAluno.addChild(new SingleFile("Certidao_de_Nascimento"));
+                novoAluno.addChild(new SingleFile("Historico.pdf"));
                 System.out.println("Nova matrícula " + novaMatricula + " adicionada com sucesso");
             }
             else if (choice == 0){
